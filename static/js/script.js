@@ -19,8 +19,9 @@ function checkSelect(select) {
     if (select.value > 0) {
         personSelect.disabled = false; // 有効化
     } else {
-        personSelect.selectedIndex = 0; // 選択をリセット
+        // personSelect.selectedIndex = 0; // 選択をリセット
         personSelects.forEach(select => {
+            select.value = 0;
             select.disabled = true; // 企業が選択されていない場合、すべての担当者を無効化
         });
     }
