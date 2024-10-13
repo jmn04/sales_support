@@ -60,7 +60,7 @@
                 <div class="row col">
                     <div class="col">
                         <select id="wayOfMeeting" class="form-select" aria-label="会議方式">
-                            <option selected>会議方式を選択</option>
+                            <option value="0" selected>会議方式を選択</option>
                             <option value="1">対面</option>
                             <option value="2">Teams</option>
                             <option value="3">Zoom</option>
@@ -70,7 +70,7 @@
                     </div>
                     <div class="col">
                         <select id="meetingStatus" class="form-select" aria-label="実施状況">
-                            <option selected>実施状況を選択</option>
+                            <option value="0" selected>実施状況を選択</option>
                             <option value="1">実施済</option>
                             <option value="2">実施予定</option>
                             <option value="3">未定</option>
@@ -84,7 +84,7 @@
                 <label for="employeeSelect" class="form-label col-sm-2">社員</label>
                 <div class="col">
                     <select id="employeeSelect1" class="form-select" aria-label="社員" onchange="selectNextItem(this, 'employeeSelect2')">
-                        <option selected>社員を選択</option>
+                        <option value="0" selected>社員を選択</option>
                         <option value="1">きのこ</option>
                         <option value="2">たけのこ</option>
                         <option value="3">かずのこ</option>
@@ -93,7 +93,7 @@
 
                 <div class="col">
                     <select id="employeeSelect2" class="form-select" aria-label="社員" onchange="selectNextItem(this, 'employeeSelect3')" disabled>
-                        <option selected>社員を選択</option>
+                        <option value="0" selected>社員を選択</option>
                         <option value="1">きのこ</option>
                         <option value="2">たけのこ</option>
                         <option value="3">かずのこ</option>
@@ -102,7 +102,7 @@
 
                 <div class="col">
                     <select id="employeeSelect3" class="form-select" aria-label="社員" onchange="selectNextItem(this, 'employeeSelect4')" disabled>
-                        <option selected>社員を選択</option>
+                        <option value="0" selected>社員を選択</option>
                         <option value="1">きのこ</option>
                         <option value="2">たけのこ</option>
                         <option value="3">かずのこ</option>
@@ -116,7 +116,7 @@
                             <label for="placeInput" class="form-label col-sm-2">&nbsp;</label>
                             <div class="col">
                                 <select id="employeeSelect4" class="form-select" aria-label="社員" onchange="selectNextItem(this, 'employeeSelect5')" disabled>
-                                    <option selected>社員を選択</option>
+                                    <option value="0" selected>社員を選択</option>
                                     <option value="1">きのこ</option>
                                     <option value="2">たけのこ</option>
                                     <option value="3">かずのこ</option>
@@ -124,7 +124,7 @@
                             </div>
                             <div class="col">
                                 <select id="employeeSelect5" class="form-select" aria-label="社員" onchange="selectNextItem(this, 'employeeSelect6')" disabled>
-                                    <option selected>社員を選択</option>
+                                    <option value="0" selected>社員を選択</option>
                                     <option value="1">きのこ</option>
                                     <option value="2">たけのこ</option>
                                     <option value="3">かずのこ</option>
@@ -132,7 +132,7 @@
                             </div>
                             <div class="col">
                                 <select id="employeeSelect6" class="form-select" aria-label="社員" disabled>
-                                    <option selected>社員を選択</option>
+                                    <option value="0" selected>社員を選択</option>
                                     <option value="1">きのこ</option>
                                     <option value="2">たけのこ</option>
                                     <option value="3">かずのこ</option>
@@ -151,10 +151,10 @@
 
             <!-- 相手先企業 -->
             <div class="row mb-3">
-                <label for="companyInput" class="form-label col-sm-2">相手先企業</label>
+                <label for="companySelect" class="form-label col-sm-2">相手先企業</label>
                 <div class="col">
-                    <select id="companyInput" class="form-select" aria-label="企業名" onchange="checkSelect(this)">
-                        <option selected>相手先企業を選択</option>
+                    <select id="companySelect" class="form-select" aria-label="企業名" onchange="checkSelect(this)">
+                        <option value="0" selected>相手先企業を選択</option>
                         <option value="1">きのこ</option>
                         <option value="2">たけのこ</option>
                         <option value="3">かずのこ</option>
@@ -167,7 +167,7 @@
                 <label for="personSelect" class="form-label col-sm-2">相手先担当者</label>
                 <div class="col">
                     <select id="personSelect1" class="form-select" onchange="selectNextItem(this, 'personSelect2')" aria-label="担当者" disabled>
-                        <option selected>相手先担当者を選択</option>
+                        <option value="0" selected>相手先担当者を選択</option>
                         <option value="1">きのこ</option>
                         <option value="2">たけのこ</option>
                         <option value="3">かずのこ</option>
@@ -176,7 +176,7 @@
 
                 <div class="col">
                     <select id="personSelect2" class="form-select" onchange="selectNextItem(this, 'personSelect3')" aria-label="担当者" disabled>
-                        <option selected>相手先担当者を選択</option>
+                        <option value="0" selected>相手先担当者を選択</option>
                         <option value="1">きのこ</option>
                         <option value="2">たけのこ</option>
                         <option value="3">かずのこ</option>
@@ -185,7 +185,7 @@
 
                 <div class="col">
                     <select id="personSelect3" class="form-select" onchange="selectNextItem(this, 'personSelect4')" aria-label="担当者" disabled>
-                        <option selected>相手先担当者を選択</option>
+                        <option value="0" selected>相手先担当者を選択</option>
                         <option value="1">きのこ</option>
                         <option value="2">たけのこ</option>
                         <option value="3">かずのこ</option>
@@ -199,7 +199,7 @@
                             <label for="personSelect" class="form-label col-sm-2">&nbsp;</label>
                             <div class="col">
                                 <select id="personSelect4" class="form-select" onchange="selectNextItem(this, 'personSelect5')" aria-label="担当者" disabled>
-                                    <option selected>相手先担当者を選択</option>
+                                    <option value="0" selected>相手先担当者を選択</option>
                                     <option value="1">きのこ</option>
                                     <option value="2">たけのこ</option>
                                     <option value="3">かずのこ</option>
@@ -207,7 +207,7 @@
                             </div>
                             <div class="col">
                                 <select id="personSelect5" class="form-select" onchange="selectNextItem(this, 'personSelect6')" aria-label="担当者" disabled>
-                                    <option selected>相手先担当者を選択</option>
+                                    <option value="0" selected>相手先担当者を選択</option>
                                     <option value="1">きのこ</option>
                                     <option value="2">たけのこ</option>
                                     <option value="3">かずのこ</option>
@@ -215,7 +215,7 @@
                             </div>
                             <div class="col">
                                 <select id="personSelect6" class="form-select" aria-label="担当者" disabled>
-                                    <option selected>相手先担当者を選択</option>
+                                    <option value="0" selected>相手先担当者を選択</option>
                                     <option value="1">きのこ</option>
                                     <option value="2">たけのこ</option>
                                     <option value="3">かずのこ</option>
