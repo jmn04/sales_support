@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登録</title>
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+<body id="body">
+    <div class="mb-4">
+        <nav class="navbar bg-primary">
+            <div class="container-fluid">
+            <span class="navbar-brand mt-2 mb-2 h1 text-white">営業支援システム</span>
+            </div>
+        </nav>
+    </div>
+
+    <div id="wrapper">
+        <div class="container center-block">
+            <h3 class="h3 mb-5">コンタクト履歴登録</h3>
+            <!-- 日付 -->
+            <div class="row mb-3">
+                <label for="dateInput" class="form-label col-sm-2">日付</label>
+                <div class="col-sm-5">
+                    <input type="date" class="form-control" id="dateInput">
+                </div>
+            </div>
+
+            <!-- 時間 -->
+            <div class="row mb-3">
+                <label for="timeInput" class="form-label col-sm-2">時間</label>
+                <div class="col-sm-5">
+                    <div class="input-group">
+                        <input id="timeInput" type="time" class="form-control" aria-label="開始時間">
+                        <span class="input-group-text">  ～  </span>
+                        <input type="time" class="form-control" aria-label="終了時間">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 場所 -->
+            <div class="row mb-3">
+                <label for="placeInput" class="form-label col-sm-2">場所</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="placeInput">
+                </div>
+            </div>
+
+            <!-- 社員 -->
+            <div class="row mb-3">
+                <label for="employeeSelect" class="form-label col-sm-2">社員</label>
+                <div class="col">
+                    <select id="employeeSelect1" class="form-select" aria-label="社員" onchange="selectNextItem(this, 'employeeSelect2')">
+                        <option selected>社員を選択</option>
+                        <option value="1">きのこ</option>
+                        <option value="2">たけのこ</option>
+                        <option value="3">かずのこ</option>
+                    </select>
+                </div>
+
+                <div class="col">
+                    <select id="employeeSelect2" class="form-select" aria-label="社員" onchange="selectNextItem(this, 'employeeSelect3')" disabled>
+                        <option selected>社員を選択</option>
+                        <option value="1">きのこ</option>
+                        <option value="2">たけのこ</option>
+                        <option value="3">かずのこ</option>
+                    </select>
+                </div>
+
+                <div class="col">
+                    <select id="employeeSelect3" class="form-select" aria-label="社員" onchange="selectNextItem(this, 'employeeSelect4')" disabled>
+                        <option selected>社員を選択</option>
+                        <option value="1">きのこ</option>
+                        <option value="2">たけのこ</option>
+                        <option value="3">かずのこ</option>
+                    </select>
+                </div>
+
+                <!-- アコーディオンボタン押下で表示されるコンテンツ -->
+                <div class="accordion-item border-0 mb-3">
+                    <div id="empoyeeOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body row mt-3">
+                            <label for="placeInput" class="form-label col-sm-2">&nbsp;</label>
+                            <div class="col">
+                                <select id="employeeSelect4" class="form-select" aria-label="社員" onchange="selectNextItem(this, 'employeeSelect5')" disabled>
+                                    <option selected>社員を選択</option>
+                                    <option value="1">きのこ</option>
+                                    <option value="2">たけのこ</option>
+                                    <option value="3">かずのこ</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <select id="employeeSelect5" class="form-select" aria-label="社員" onchange="selectNextItem(this, 'employeeSelect6')" disabled>
+                                    <option selected>社員を選択</option>
+                                    <option value="1">きのこ</option>
+                                    <option value="2">たけのこ</option>
+                                    <option value="3">かずのこ</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <select id="employeeSelect6" class="form-select" aria-label="社員" disabled>
+                                    <option selected>社員を選択</option>
+                                    <option value="1">きのこ</option>
+                                    <option value="2">たけのこ</option>
+                                    <option value="3">かずのこ</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- アコーディオンボタン -->
+                <div class="accordion">
+                    <div class="row offset-sm-2">
+                        <button type="button" class="btn btn-secondary col-auto" data-bs-toggle="collapse" data-bs-target="#empoyeeOne" aria-expanded="false" aria-controls="empoyeeOne" onclick="toggleAccordion(this)" style="font-weight: bold;">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 相手先企業 -->
+            <div class="row mb-3">
+                <label for="companyInput" class="form-label col-sm-2">相手先企業</label>
+                <div class="col">
+                    <select id="companyInput" class="form-select" aria-label="企業名" onchange="checkSelect(this)">
+                        <option selected>相手先企業を選択</option>
+                        <option value="1">きのこ</option>
+                        <option value="2">たけのこ</option>
+                        <option value="3">かずのこ</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 相手先担当者 -->
+            <div class="row mb-3">
+                <label for="personSelect" class="form-label col-sm-2">相手先担当者</label>
+                <div class="col">
+                    <select id="personSelect1" class="form-select" onchange="selectNextItem(this, 'personSelect2')" aria-label="担当者" disabled>
+                        <option selected>相手先担当者を選択</option>
+                        <option value="1">きのこ</option>
+                        <option value="2">たけのこ</option>
+                        <option value="3">かずのこ</option>
+                    </select>
+                </div>
+
+                <div class="col">
+                    <select id="personSelect2" class="form-select" onchange="selectNextItem(this, 'personSelect3')" aria-label="担当者" disabled>
+                        <option selected>相手先担当者を選択</option>
+                        <option value="1">きのこ</option>
+                        <option value="2">たけのこ</option>
+                        <option value="3">かずのこ</option>
+                    </select>
+                </div>
+
+                <div class="col">
+                    <select id="personSelect3" class="form-select" onchange="selectNextItem(this, 'personSelect4')" aria-label="担当者" disabled>
+                        <option selected>相手先担当者を選択</option>
+                        <option value="1">きのこ</option>
+                        <option value="2">たけのこ</option>
+                        <option value="3">かずのこ</option>
+                    </select>
+                </div>
+
+                <!-- アコーディオンボタン押下で表示されるコンテンツ -->
+                <div class="accordion-item border-0 mb-3">
+                    <div id="personOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body row mt-3">
+                            <label for="personSelect" class="form-label col-sm-2">&nbsp;</label>
+                            <div class="col">
+                                <select id="personSelect4" class="form-select" onchange="selectNextItem(this, 'personSelect5')" aria-label="担当者" disabled>
+                                    <option selected>相手先担当者を選択</option>
+                                    <option value="1">きのこ</option>
+                                    <option value="2">たけのこ</option>
+                                    <option value="3">かずのこ</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <select id="personSelect5" class="form-select" onchange="selectNextItem(this, 'personSelect6')" aria-label="担当者" disabled>
+                                    <option selected>相手先担当者を選択</option>
+                                    <option value="1">きのこ</option>
+                                    <option value="2">たけのこ</option>
+                                    <option value="3">かずのこ</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <select id="personSelect6" class="form-select" aria-label="担当者" disabled>
+                                    <option selected>相手先担当者を選択</option>
+                                    <option value="1">きのこ</option>
+                                    <option value="2">たけのこ</option>
+                                    <option value="3">かずのこ</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- アコーディオンボタン -->
+                <div class="accordion">
+                    <div class="row offset-sm-2">
+                        <button type="button" class="btn btn-secondary col-auto" data-bs-toggle="collapse" data-bs-target="#personOne" aria-expanded="false" aria-controls="personOne" onclick="toggleAccordion(this)" style="font-weight: bold;">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 会議方式 -->
+            <div class="row mb-3">
+                <label for="wayOfMeeting" class="form-label col-sm-2">会議概況</label>
+                <div class="row col">
+                    <div class="col">
+                        <select id="wayOfMeeting" class="form-select" aria-label="会議方式">
+                            <option selected>会議方式を選択</option>
+                            <option value="1">対面</option>
+                            <option value="2">Teams</option>
+                            <option value="3">Zoom</option>
+                            <option value="4">Webex</option>
+                            <option value="5">Google Meet</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select id="meetingStatus" class="form-select" aria-label="実施状況">
+                            <option selected>実施状況を選択</option>
+                            <option value="1">実施済</option>
+                            <option value="2">実施予定</option>
+                            <option value="3">未定</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 打ち合わせ目的 -->
+            <div class="row mb-3">
+                <label for="meetingPurpose" class="form-label col">目的</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="meetingPurpose">
+                </div>
+            </div>
+
+            <!-- 打ち合わせ詳細 -->
+            <div class="row mb-3">
+                <label for="meetingDetails" class="form-label col-sm-2">詳細</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="meetingDetails" rows="3"></textarea> 
+                </div>
+            </div>
+
+            <!-- 重要な会議チェックボックス -->
+            <div class="row mb-3">
+                <div class="col-sm-10 offset-sm-2">
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="importantCheck">
+                      <label class="form-check-label" for="importantCheck"><strong>”重要な会議”</strong>として登録する</label>
+                  </div>
+                </div>
+            </div>
+
+            <!-- 登録ボタン -->
+            <div class="row mb-3 offset-sm-2">
+                <input class="btn btn-primary col-auto" type="submit" value="登録">
+            </div>
+        </div>
+    </div>
+
+    <script src="./static/js/bootstrap.min.js"></script>
+    <script src="./static/js/script.js"></script>
+</body>
+</html>
