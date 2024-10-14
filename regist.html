@@ -92,7 +92,7 @@
                 </div>
 
                 <div class="col">
-                    <select id="employeeSelect2" class="form-select" aria-label="社員" onchange="selectNextItem(this, 'employeeSelect3')" disabled>
+                    <select id="employeeSelect2" class="form-select" aria-label="社員" onchange="selectNextItem(this, 'employeeSelect3')">
                         <option value="0" selected>社員を選択</option>
                         <option value="1">きのこ</option>
                         <option value="2">たけのこ</option>
@@ -101,7 +101,7 @@
                 </div>
 
                 <div class="col">
-                    <select id="employeeSelect3" class="form-select" aria-label="社員" onchange="selectNextItem(this, 'employeeSelect4')" disabled>
+                    <select id="employeeSelect3" class="form-select" aria-label="社員" onchange="selectNextItem(this, 'employeeSelect4')">
                         <option value="0" selected>社員を選択</option>
                         <option value="1">きのこ</option>
                         <option value="2">たけのこ</option>
@@ -115,7 +115,7 @@
                         <div class="accordion-body row mt-3">
                             <label for="placeInput" class="form-label col-sm-2">&nbsp;</label>
                             <div class="col">
-                                <select id="employeeSelect4" class="form-select" aria-label="社員" onchange="selectNextItem(this, 'employeeSelect5')" disabled>
+                                <select id="employeeSelect4" class="form-select" aria-label="社員" onchange="selectNextItem(this, 'employeeSelect5')">
                                     <option value="0" selected>社員を選択</option>
                                     <option value="1">きのこ</option>
                                     <option value="2">たけのこ</option>
@@ -123,7 +123,7 @@
                                 </select>
                             </div>
                             <div class="col">
-                                <select id="employeeSelect5" class="form-select" aria-label="社員" onchange="selectNextItem(this, 'employeeSelect6')" disabled>
+                                <select id="employeeSelect5" class="form-select" aria-label="社員" onchange="selectNextItem(this, 'employeeSelect6')">
                                     <option value="0" selected>社員を選択</option>
                                     <option value="1">きのこ</option>
                                     <option value="2">たけのこ</option>
@@ -131,7 +131,7 @@
                                 </select>
                             </div>
                             <div class="col">
-                                <select id="employeeSelect6" class="form-select" aria-label="社員" disabled>
+                                <select id="employeeSelect6" class="form-select" aria-label="社員">
                                     <option value="0" selected>社員を選択</option>
                                     <option value="1">きのこ</option>
                                     <option value="2">たけのこ</option>
@@ -144,7 +144,7 @@
                 <!-- アコーディオンボタン -->
                 <div class="accordion">
                     <div class="row offset-sm-2">
-                        <button type="button" class="btn btn-secondary col-auto" data-bs-toggle="collapse" data-bs-target="#empoyeeOne" aria-expanded="false" aria-controls="empoyeeOne" onclick="toggleAccordion(this)" style="font-weight: bold;">+</button>
+                        <button type="button" class="btn btn-secondary col-auto" data-bs-toggle="collapse" data-bs-target="#empoyeeOne" aria-expanded="false" aria-controls="empoyeeOne" onclick="toggleAccordion(this)" style="font-weight: bold; width: 37.5px;">+</button>
                     </div>
                 </div>
             </div>
@@ -166,7 +166,7 @@
             <div class="row mb-3">
                 <label for="personSelect" class="form-label col-sm-2">相手先担当者</label>
                 <div class="col">
-                    <select id="personSelect1" class="form-select" onchange="selectNextItem(this, 'personSelect2')" aria-label="担当者" disabled>
+                    <select id="personSelect1" class="form-select" aria-label="担当者" disabled>
                         <option value="0" selected>相手先担当者を選択</option>
                         <option value="1">きのこ</option>
                         <option value="2">たけのこ</option>
@@ -175,7 +175,7 @@
                 </div>
 
                 <div class="col">
-                    <select id="personSelect2" class="form-select" onchange="selectNextItem(this, 'personSelect3')" aria-label="担当者" disabled>
+                    <select id="personSelect2" class="form-select" aria-label="担当者" disabled>
                         <option value="0" selected>相手先担当者を選択</option>
                         <option value="1">きのこ</option>
                         <option value="2">たけのこ</option>
@@ -184,7 +184,7 @@
                 </div>
 
                 <div class="col">
-                    <select id="personSelect3" class="form-select" onchange="selectNextItem(this, 'personSelect4')" aria-label="担当者" disabled>
+                    <select id="personSelect3" class="form-select" aria-label="担当者" disabled>
                         <option value="0" selected>相手先担当者を選択</option>
                         <option value="1">きのこ</option>
                         <option value="2">たけのこ</option>
@@ -198,7 +198,7 @@
                         <div class="accordion-body row mt-3">
                             <label for="personSelect" class="form-label col-sm-2">&nbsp;</label>
                             <div class="col">
-                                <select id="personSelect4" class="form-select" onchange="selectNextItem(this, 'personSelect5')" aria-label="担当者" disabled>
+                                <select id="personSelect4" class="form-select" aria-label="担当者" disabled>
                                     <option value="0" selected>相手先担当者を選択</option>
                                     <option value="1">きのこ</option>
                                     <option value="2">たけのこ</option>
@@ -206,7 +206,7 @@
                                 </select>
                             </div>
                             <div class="col">
-                                <select id="personSelect5" class="form-select" onchange="selectNextItem(this, 'personSelect6')" aria-label="担当者" disabled>
+                                <select id="personSelect5" class="form-select" aria-label="担当者" disabled>
                                     <option value="0" selected>相手先担当者を選択</option>
                                     <option value="1">きのこ</option>
                                     <option value="2">たけのこ</option>
@@ -227,7 +227,7 @@
                 <!-- アコーディオンボタン -->
                 <div class="accordion">
                     <div class="row offset-sm-2">
-                        <button type="button" class="btn btn-secondary col-auto" data-bs-toggle="collapse" data-bs-target="#personOne" aria-expanded="false" aria-controls="personOne" onclick="toggleAccordion(this)" style="font-weight: bold;">+</button>
+                        <button type="button" class="btn btn-secondary col-auto" data-bs-toggle="collapse" data-bs-target="#personOne" aria-expanded="false" aria-controls="personOne" onclick="toggleAccordion(this)" style="font-weight: bold; width: 37.5px;">+</button>
                     </div>
                 </div>
             </div>
