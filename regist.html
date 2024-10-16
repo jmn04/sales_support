@@ -21,21 +21,21 @@
             <h3 class="h3 mb-5">コンタクト履歴登録</h3>
             <!-- 日付 -->
             <div class="row mb-3">
-                <label for="dateInput" class="form-label col-sm-2">日付・時間</label>
-                <div class="col-sm-4">
+                <label for="dateInput" class="form-label col-sm-2">日付</label>
+                <div class="col-sm-5">
                     <input type="date" class="form-control" id="dateInput">
                 </div>
-                <div class="col-sm-6">
+                <!-- <div class="col-sm-6">
                     <div class="input-group">
                         <input id="timeInput" type="time" class="form-control" aria-label="開始時間">
                         <span class="input-group-text">  ～  </span>
                         <input type="time" class="form-control" aria-label="終了時間">
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <!-- 時間 -->
-            <!-- <div class="row mb-3">
+            <div class="row mb-3">
                 <label for="timeInput" class="form-label col-sm-2">時間</label>
                 <div class="col-sm-5">
                     <div class="input-group">
@@ -44,7 +44,7 @@
                         <input type="time" class="form-control" aria-label="終了時間">
                     </div>
                 </div>
-            </div> -->
+            </div>
 
             <!-- 場所 -->
             <div class="row mb-3">
@@ -56,25 +56,46 @@
 
             <!-- 会議方式 -->
             <div class="row mb-3">
-                <label for="wayOfMeeting" class="form-label col-sm-2">方式・状況</label>
-                <div class="row col">
-                    <div class="col">
-                        <select id="wayOfMeeting" class="form-select" aria-label="会議方式">
-                            <option value="0" selected>会議方式を選択</option>
-                            <option value="1">対面</option>
-                            <option value="2">Teams</option>
-                            <option value="3">Zoom</option>
-                            <option value="4">Webex</option>
-                            <option value="5">Google Meet</option>
-                        </select>
+                <label for="wayOfMeeting" class="form-label col-sm-2">会議方式</label>
+                <div class="col-sm-5">
+                    <select id="wayOfMeeting" class="form-select" aria-label="会議方式">
+                        <option value="0" selected>会議方式を選択</option>
+                        <option value="1">対面</option>
+                        <option value="2">Teams</option>
+                        <option value="3">Zoom</option>
+                        <option value="4">Webex</option>
+                        <option value="5">Google Meet</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 会議ステータス -->
+            <div class="row mb-3">
+                <label for="wayOfMeeting" class="form-label col-sm-2">ステータス</label>
+                <div class="row col-sm-8" style="margin-left: 0.5%;">
+                    <div class="form-check col">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          実施済み
+                        </label>
                     </div>
-                    <div class="col">
-                        <select id="meetingStatus" class="form-select" aria-label="実施状況">
-                            <option value="0" selected>実施状況を選択</option>
-                            <option value="1">実施済</option>
-                            <option value="2">実施予定</option>
-                            <option value="3">未定</option>
-                        </select>
+                    <div class="form-check col">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          実施予定
+                        </label>
+                    </div>
+                    <div class="form-check col">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                        <label class="form-check-label" for="flexRadioDefault3">
+                          未定
+                        </label>
+                    </div>
+                    <div class="form-check col">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+                        <label class="form-check-label" for="flexRadioDefault4">
+                          キャンセル
+                        </label>
                     </div>
                 </div>
             </div>

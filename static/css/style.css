@@ -10,3 +10,6 @@ textarea {
     resize: none;
     height: 300px;
 }
+label {
+    font-weight: 700;
+}

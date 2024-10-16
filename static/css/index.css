@@ -1,0 +1,11 @@
+#wrapper {}
+
+.search-index {
+    display: flex;
+    align-items: center;
+}
+
+label {
+    font-weight: 700;
+    text-align: right;
+}

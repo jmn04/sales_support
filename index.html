@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コンタクト履歴一覧</title>
+        <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./static/css/index.css">
+</head>
+<body>
+    <div class="mb-4">
+        <nav class="navbar bg-primary">
+            <div class="container-fluid">
+            <span class="navbar-brand mt-2 mb-2 h1 text-white">営業支援システム</span>
+            </div>
+        </nav>
+    </div>
+
+    <div id="wrapper">
+        <div class="container">
+            <div class="search-content bg-light p-3">
+                <h4 class="h4 ms-3 mb-3">検索条件設定</h4>
+
+                <div class="container">
+                    <div class="row mb-3">
+                        <div class="row col-sm-3 search-index">
+                            <label for="employeeSelect" class="form-label col-sm-3 ms-4">社員</label>
+                            <select id="employeeSelect1" class="form-select col" aria-label="社員" onchange="selectNextItem(this, 'employeeSelect2')">
+                                <option value="0" selected>社員を選択</option>
+                                <option value="1">きのこ</option>
+                                <option value="2">たけのこ</option>
+                                <option value="3">かずのこ</option>
+                            </select>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="row col-sm-5 search-index">
+                            <label for="dateInput" class="form-label col-sm-3">日付範囲</label>
+                            <div class="input-group col">
+                                <input id="dateInput" type="date" class="form-control" aria-label="From">
+                                <span class="input-group-text">  ～  </span>
+                                <input type="date" class="form-control" aria-label="To">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col d-flex justify-content-end mx-3">
+                        <button type="button" class="btn btn-secondary col-sm-2">リセット</button>
+                    </div>
+                    <div class="col d-flex justify-content-start mx-3">
+                        <button type="button" class="btn btn-primary col-sm-2">検索</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./static/js/bootstrap.min.js"></script>
+</body>
+</html>
